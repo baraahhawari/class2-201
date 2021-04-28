@@ -1,228 +1,160 @@
 'use strict';
 
-/*
-if statement
 
-if(condition){
-    do this code 
-}else if(another condition){
-    do this other code
-}else{
-    do the else code
-}
-
-
-Switch
-
-switch(variable){
-    case 'value1':
-        console.log(-----);
-        break;
-    case 'value2':
-        do this code
-        break
-    default:
-        do the last code
-}
-
-
-comparison operators:
-
- == value
- === value and datatype
- >
- <
- != not equal value
- !== not equal value and datatype
- >=
- <=
-
- "Sultan" === "Sultan"  // true
- 'Riziq' == 'Ahamd'     //false
-
-
- Logical operator:
-AND &&  ==> if BOTH of them are true  it will be true
-OR || ==> if BOTH of them are false it will be false
-
-!a ==> !true => false
-
-Truthy:
-true
-1
-5/2
-'bag'
-'true'
-' ' => not empty string 
-
-falsy value:
-false
-0
-'' ==> empty string
-'string'/2 ==> NaN
-
-
-*/
-
-// let userName = prompt('what is your name');
-// let anotherName = ''; //falsy value
-// if (userName) {
-//     alert('Hello ' + userName);
-// } else if (!anotherName) {
-//     alert('please enter name')
+// let counter = 0;
+// while (counter < 5) {
+//     console.log(counter);
+//     counter++;
 // }
+// console.log('outside', counter);
 
+// for while do-while
 
-/*
-LOOPS
+// Arrays
+// let ahmadGrade=20;
+// ..
 
-1.
-for loop
-when I know how many time I want to repeat and loop
+// let grades = [50, 50, 40, 60, 70, 90];
+// console.log(grades);
+// console.log('array length', grades.length);
 
-for(initial; condition; update){
-    Do the code;
-}
-(increment)
-initialization : let i=0;
-condition: i<=10;
-update: i++ ;
-
-(decrement)
-initialization : let i=0;
-condition: i>=10;
-update: i-- ;
-
-
-2. 
-while
-Validation, if I do not know how many times you will loop and run the code
-
-while(condition){
-    the code
-}
-*/
-
-// let userName = prompt('what is your name');
-
-// while (!userName) {
-//     userName = prompt('please enter your name');
+// for (let i = 0; i < grades.length; i++) {
+//     console.log(grades[i] += 5);
 // }
+// console.log(grades);
 
-// for (let i = 0; i <= 5; i++) {
+// let theNumbers = grades;
+// console.log('before', theNumbers);
+// theNumbers[2] = 444;
+// console.log('after', theNumbers);
 
-//     // if (i == 2) {
-//     //     break;
-//     // }
-//     if (i == 3) {
-//         continue;
+// let array1 = [1, 2, 3];
+// let array2 = [5, 9, 8];
+
+// let array3 = array1 + ',' + array2;
+// console.log(array3);
+
+// // add to the end of the array push
+// array2.push(4); //[5,9,8,4]
+// // remove from the end of the array pop
+// array1.pop(); // [1,2]
+// // add to the bigging of the array unshift
+// array1.unshift(777); //[777,1,2]
+// // remove from the first the array shift
+// array2.shift(); //[9,8,4]
+
+// let score = 0;
+// let correct = false;
+// let movies = ['harry potter', 'Dark', 'the godfather', 'inception', 'catch me if you can', 'now you see me', 'cast away'];
+
+// for (let j = 0; j < 6; j++) {
+
+//     let question = prompt('whats my fav movie', 'ex: inception, catch me if you can, now you see me');
+
+//     for (let i = 0; i < movies.length; i++) {
+//         if (question == movies[i]) {
+//             alert('correct answer');
+//             score++;
+//             correct = true;
+//             // j = 7;
+//             break;
+//         }
+
 //     }
-//     console.log(i);
+//     if (correct) {
+//         break;
+//     }
+// }
+
+// alert(`Great work your score is ${score} have a nice day`);
+
+
+// ========================= Functions =====================================================================
+
+// function declaration
+// function welcomingMsg() {
+//     alert('hello all, Wake up please')
+// }
+// welcomingMsg();
+
+// let userInput = prompt('whats your name??');
+
+
+// function getName(userName) {
+//     let output = `hello ${userName}`;
+//     return output;
+// }
+
+// console.log(getName(userInput));
+// console.log(getName('Ahmad'));
+// console.log(getName('Sanaa'));
+// console.log(getName('Ansam'));
+// console.log(getName('Mahmoud'));
+// console.log(getName('Ibrahem'));
+// console.log(getName('Hamza'));
+
+
+// function square(length) {
+//     let area = length ** 2;
+//     let perimeter = length * 4;
+//     return [area, perimeter];
+
+// }
+
+// console.log(square(5));
+
+// let output = square(90);
+// console.log(output);
+// console.log('area', output[0], 'perimeter', output[1]);
+
+// function declaration correct
+// console.log(sumArray(9, 6));
+
+// function sumArray(num1, num2) {
+//     let output = num1 + num2;
+//     return output;
 // }
 
 
-// DO While loop
-/*
-do{
-    do this code 
-}while(condition)
-*/
+// // function expression will not work
+// console.log(square(5));
 
-// let i = 0;
-// do {
-//     console.log(i);
-//     i++;
-// } while (i < 1)
+// let square = function(length) {
+//     let area = length ** 2;
+//     let perimeter = length * 4;
+//     return [area, perimeter];
 
+// }
 
-// Array
-let ahmadGrade = 100;
-let olaGrade = 90;
+// var someFunction = function() {
+//     alert('hello');
+// }
+// someFunction();
 
-// let grades = [90, 100, 85, 90, 66, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90, 30, 12, 80, 90];
-// console.log('the all array', grades);
-// console.log('the first index', grades[0]);
-// console.log('the 3rd index', grades[2]);
-
-// // I will know the length of the array
-// console.log('length of the array', grades.length);
-
-// // adding to the array [to the end of it]
-// grades.push(77);
-// console.log('length of the array after pushing', grades.length);
-// console.log(grades);
-
-// // remove from the array [from the end]
-// grades.pop();
-// grades.pop();
-// grades.pop();
-// console.log('length of the array after popping', grades.length);
-// console.log(grades);
+// immediately invoked function
+// (function() {
+//     console.log('good bye');
+// })();
 
 
-// // how to know the index of value inside array
-// let index = grades.indexOf(1);
-// console.log(index);
+// let userInput = prompt('whats your name??');
+// (function(userName) {
+//     console.log(`goodbye ${userName}`);
+// })(userInput);
+// =======================================================================
+// =======================================================================
+// scopes
 
+// Global variables can be used anywhere
 
-// let info = ['sanaa', 95, 'tall', ['walking', 'watching movie', [1, 2, 3]]];
-// console.log(info);
-// console.log(info[0]);
-// console.log(info[3]);
-// console.log(info[3][2][1]);
+// let firstName = 'Ali';
 
-// +++++++++++++++++++++ DEMO +++++++++++++++++++
+// function fullName() {
+//     // local variable, only for the scope that it is inside
+//     let welcome = 'hello';
+//     alert(welcome + firstName);
+//     console.log('inside', welcome);
+// }
 
-alert('welcome to my page');
-
-let score = 0;
-
-let userName = prompt('whats your name');
-
-while (!userName) {
-    userName = prompt('please enter a value');
-}
-
-if (userName !== 'baraah') {
-    alert('too bad your name is not baraah')
-}
-alert('hello ' + userName + ' glad to have you here');
-
-let answer = prompt('is my fav food pasta', 'answer with yes or no please');
-
-console.log(answer);
-
-if (answer.toLocaleLowerCase() === 'yes') {
-    alert('you answered correctly ');
-    score++;
-} else {
-    alert('no that is wrong');
-}
-
-console.log(score);
-
-let favFood = ['mansaf', 'maqloba', 'fish', 'zeit w za\'ater'];
-
-for (let i = 0; i < favFood.length; i++) {
-    console.log(favFood[i]);
-}
-
-
-let question2 = prompt('do miniones fly');
-
-switch (question2.toLocaleLowerCase()) {
-    case 'yes':
-    case 'y':
-        alert('wrong, they cannot fly');
-        break;
-
-    case 'no':
-    case 'n':
-        alert('correct, they cannot fly');
-        score++;
-        break;
-}
-
-console.log(score);
-
-alert('Great work ' + userName + ' your score is ' + score);
+// fullName();
+// console.log('outside', welcome);
